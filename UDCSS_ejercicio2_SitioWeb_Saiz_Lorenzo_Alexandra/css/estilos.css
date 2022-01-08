@@ -1,0 +1,194 @@
+/*Hoja de estilos*/
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+html{
+    min-height: 100%;
+}
+/*contenedor general, para usar CSS-GRID*/
+.grid-container > * {
+    border-radius: 4px;
+    display: grid;
+    text-align: center;
+    font-weight: bold;
+    font-style: oblique;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/*definicion de las areas que contiene el contenedor general de CSS-GRKID*/
+.logo{
+    grid-area: logo;
+    
+}
+.header{
+    grid-area: header;
+   
+}   
+.nav{
+    grid-area: nav;
+    
+}
+.main{
+    grid-area: main;
+    
+}
+.aside{
+    grid-area: aside;
+    
+}
+.footer{
+    grid-area: footer;
+    background-color: lightblue;    
+}
+/*disposicion de las distintas areas en el contenedor principal, 
+tendra distintos formatos dependiento del tamaño de la pantalla. Formato movil*/
+.grid-container{
+    width: 100%;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns:  repeat(2, 1fr);/*250px auto;*/
+    grid-template-rows: repeat(5, auto);/*250px 50px auto 50px*/;
+    grid-template-areas: 
+        "logo header"   
+        "nav   ."  
+        "aside aside" 
+        "main main" 
+        "footer footer" 
+    ;
+
+}
+/*disposicion de las areas para formato tablet*/
+@media (min-width: 600px ){
+    .grid-container{
+        /*width: 100%;
+        display: grid;*/
+        grid-template-columns:  repeat (2, 1fr)/*250px auto*/;
+        grid-template-rows: repeat (4, auto)/*250px 50px auto 50px*/;
+        grid-template-areas: 
+        "logo  header"  
+        "nav    aside"    
+        ".      main"  
+        "footer footer" 
+        ;
+    }
+}
+/*disposicion de las areas para formato ordenador*/
+@media (min-width: 900px){
+    .grid-container{
+        /*width: 100%;
+        margin: 10px, auto;*/
+        grid-gap: 5px;
+        display: grid;
+        grid-template-columns:  repeat (2, 1fr) /*250px auto*/;
+        grid-template-rows: repeat (4, 1fr)/*250px 50px auto 50px*/;
+        grid-template-areas: 
+            "logo   header" 
+            "nav     nav"    
+            "aside   main"    
+            "footer footer"  
+        ;
+    }
+}
+
+body,
+/*estilo para la cabecera de la pagina*/
+.header{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+/*estilo para el logo del header*/
+.logo img {
+    width: 90%;
+    margin:auto;
+    border-radius: 8px;
+    overflow: hidden;
+}
+/*estilos para el titulo del header*/
+.header h1.title{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color : darkviolet;
+} 
+/*estilos para los parrafos del main*/
+p{
+    text-align: center;
+    font-weight: bold;
+    color : black;
+}
+/*estilos para poner el nav en fila*/
+.nav ul li{
+    margin: 10px;
+    padding: 0px;
+    display: inline-block;
+    list-style-type: none;
+}
+/*estilos del nav*/
+.nav ul li a{ 
+    font-weight: bold;
+    font-size: 20px;
+    color: darkviolet;
+    text-align: center;
+}
+/*quitamos el subrayado a los enlaces*/
+a:link{
+    text-decoration: none;
+}
+/*subrayado de los enlaces cuando el raton este encima*/
+a:hover{
+    text-decoration: underline;
+}
+/*para que no suban los elementos por encima del nav*/
+.clearfix{
+    clear:both;
+}
+/*estilos del main*/
+.main{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+/*estilos de article*/
+.main article{
+    display: flex;
+    width: 400px;
+    height: 250px;
+    font-weight: normal;
+    text-align: left;
+    border: 1px solid darkviolet;
+    border-radius: 8px;
+    /*margin: 5px;*/
+}
+/*estilos de imagen dentro de article*/
+.main article > img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    overflow: hidden;
+    justify-content: center;
+    display:block;
+}
+/*estilos aplicados article.a*/
+.main article a {
+    
+    font-size: 20px;
+    color: dodgerblue;
+    text-align: center;
+    display: block;
+} 
+/*estilos aplicados a la lista de article*/
+.main article li{
+    display: block;
+}
+/*estilos aplicados a aside*/
+.aside {
+    font-size: 1.5rem;
+    color : darkviolet;
+    
+}
