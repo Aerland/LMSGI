@@ -47,8 +47,8 @@ tendra distintos formatos dependiento del tamaño de la pantalla. Formato movil*
     width: 100%;
     display: grid;
     grid-gap: 5px;
-    grid-template-columns:  repeat(2, 1fr);/*250px auto;*/
-    grid-template-rows: repeat(5, auto);/*250px 50px auto 50px*/;
+    grid-template-columns:  repeat(2, 1fr);
+    grid-template-rows: repeat(5, auto);
     grid-template-areas: 
         "logo header"   
         "nav   ."  
