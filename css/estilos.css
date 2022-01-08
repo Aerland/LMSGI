@@ -61,8 +61,8 @@ tendra distintos formatos dependiento del tamaño de la pantalla. Formato movil*
 /*disposicion de las areas para formato tablet*/
 @media (min-width: 600px ){
     .grid-container{
-        /*width: 100%;
-        display: grid;*/
+        width: 100%;
+        display: grid;
         grid-template-columns:  repeat (2, 1fr)/*250px auto*/;
         grid-template-rows: repeat (4, auto)/*250px 50px auto 50px*/;
         grid-template-areas: 
@@ -76,8 +76,8 @@ tendra distintos formatos dependiento del tamaño de la pantalla. Formato movil*
 /*disposicion de las areas para formato ordenador*/
 @media (min-width: 900px){
     .grid-container{
-        /*width: 100%;
-        margin: 10px, auto;*/
+        width: 100%;
+        margin: 10px, auto;
         grid-gap: 5px;
         display: grid;
         grid-template-columns:  repeat (2, 1fr) /*250px auto*/;
