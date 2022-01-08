@@ -120,7 +120,7 @@ p{
 }
 /*estilos para poner el nav en fila*/
 .nav ul li{
-    margin: 10px;
+    margin: 15px;
     padding: 0px;
     display: inline-block;
     list-style-type: none;
