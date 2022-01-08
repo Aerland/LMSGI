@@ -4,9 +4,9 @@
     padding: 0px;
     margin: 0px;
 }
-html{
+/*html{
     min-height: 100%;
-}
+}*/
 /*contenedor general, para usar CSS-GRID*/
 .grid-container > * {
     border-radius: 4px;
